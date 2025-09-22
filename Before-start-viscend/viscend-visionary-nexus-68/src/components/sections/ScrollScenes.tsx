@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import ScrollRevealGroup from '@/components/ui/scroll-reveal-group';
 
 const SceneHeroParallax = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -44,38 +45,35 @@ const SceneHeroParallax = () => {
   );
 };
 
-const ScenePinnedSteps = () => {
+const SceneSmartProcess = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start center", "end start"] });
-  const scale = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.75, 1]);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const scale = useTransform(scrollYProgress, [0, 1], [0.98, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
 
   const steps = [
-    { title: 'Discover', desc: 'Understand goals, users, and constraints' },
-    { title: 'Design', desc: 'Prototype motion-first, refine interactions' },
-    { title: 'Develop', desc: 'Implement accessible, performant UI' },
-    { title: 'Deliver', desc: 'Measure, iterate, and scale' },
+    { title: 'Discover', desc: 'Goals, users, constraints' },
+    { title: 'Design', desc: 'Prototype motion-first' },
+    { title: 'Develop', desc: 'Accessible & performant' },
+    { title: 'Deliver', desc: 'Measure and iterate' },
   ];
 
   return (
-    <section ref={ref} className="relative py-24 bg-card/30">
+    <section ref={ref} className="relative py-24 bg-card/30" data-sr-group data-sr-stagger="100">
       <div className="container mx-auto px-4">
         <motion.div style={{ scale, opacity }} className="max-w-4xl mx-auto text-center mb-12">
-          <h3 className="text-3xl md:text-5xl font-bold text-gradient-primary">Scroll Staged Journey</h3>
-          <p className="text-muted-foreground text-lg mt-4">Each step animates in sequence as you scroll, keeping focus and story flow.</p>
+          <h3 className="text-3xl md:text-5xl font-bold text-gradient-primary">Smart Adaptive Process</h3>
+          <p className="text-muted-foreground text-lg mt-4">Clear, sequential reveal without jumps. Optimized for mobile, tablet, and desktop.</p>
         </motion.div>
-        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((s, i) => (
-            <motion.div
-              key={s.title}
-              style={{ opacity: useTransform(scrollYProgress, [0, 0.2 + i*0.2, 0.4 + i*0.2, 1], [0, 0, 1, 1]) }}
-              className="glass rounded-2xl p-5"
-            >
+
+        <ScrollRevealGroup className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6" direction="up" stagger={0.12}>
+          {steps.map((s) => (
+            <div key={s.title} className="glass rounded-2xl p-5">
               <div className="text-xl font-semibold text-neon-primary">{s.title}</div>
               <div className="text-sm text-muted-foreground mt-2">{s.desc}</div>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </ScrollRevealGroup>
       </div>
     </section>
   );
@@ -129,7 +127,7 @@ const ScrollScenes = () => {
   return (
     <div className={cn('w-full')}> 
       <SceneHeroParallax />
-      <ScenePinnedSteps />
+      <SceneSmartProcess />
       <SceneParallaxGallery />
     </div>
   );
