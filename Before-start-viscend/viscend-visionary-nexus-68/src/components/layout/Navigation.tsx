@@ -52,6 +52,8 @@ const Navigation = ({ language, onLanguageChange, theme, onThemeChange }: Naviga
 
   return (
     <nav
+      data-sr-group
+      data-sr-stagger="80"
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
