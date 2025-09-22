@@ -148,7 +148,7 @@ const Web = () => {
     ar: {
       heroTitle: "حلول الويب",
       heroSubtitle: "الجاهزية الرقمية للأعمال الحديثة",
-      heroDescription: "نساعد الشركات على التحول الرقمي من خلال حلول ويب قوية وقابلة للتطوير تدفع النمو وتوفر تجارب مستخدم استثنائية.",
+      heroDescription: "نساعد الشركات على ا��تحول الرقمي من خلال حلول ويب قوية وقابلة للتطوير تدفع النمو وتوفر تجارب مستخدم استثنائية.",
 
       digitalReadinessTitle: "الجاهزية الرقمية",
       digitalReadinessDescription: "في عالم اليوم الذي يعطي الأولوية للرقمية، وجود حضور قوي على الإنترنت ليس اختياريا، إنه ضروري. نحن نقدم خدمات التحول الرقمي الشاملة التي تضع عملك في موقع النجاح في المشهد الرقمي.",
@@ -244,7 +244,7 @@ const Web = () => {
         {
           step: "01",
           title: "الاكتشاف والتخطيط",
-          description: "نفهم أهداف عملك والجمهور المستهدف والمتطلبات التقنية لإنشاء خطة مشروع شاملة."
+          description: "نفهم أهداف عملك والجمهور المستهدف والمتطلبات ��لتقنية لإنشاء خطة مشروع شاملة."
         },
         {
           step: "02",
@@ -279,7 +279,7 @@ const Web = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 hero-pattern">
+      <section className="py-24 hero-pattern" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass border border-secondary/20 mb-8 animate-fade-in">
@@ -305,7 +305,7 @@ const Web = () => {
       </section>
 
       {/* Digital Readiness */}
-      <section className="py-24 bg-card/30">
+      <section className="py-24 bg-card/30" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gradient-secondary">
@@ -319,7 +319,7 @@ const Web = () => {
       </section>
 
       {/* Our Expertise Highlights: Frontend / Backend / DB / Security */}
-      <section className="py-20">
+      <section className="py-20" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -357,7 +357,7 @@ const Web = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24">
+      <section className="py-24" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-secondary">
