@@ -93,7 +93,7 @@ const Home = () => {
       studioTitle: "الاستوديو",
       studioDescription: "إنتاج مرئي سينمائي يحكي قصتك",
       studioServices: [
-        "المؤثرات البصرية والرسوم المتح��كة",
+        "المؤثرات البصرية والرسوم المتحركة",
         "الرسوم ثلاثية الأبعاد",
         "الجرافيك المتحرك",
         "أفلام العلامات التجارية",
@@ -118,12 +118,12 @@ const Home = () => {
         {
           icon: Award,
           title: "خبرة مجمعة تزيد عن 10 سنوات",
-          description: "فريقنا يجلب عقودًا من الخبرة من إنتاجات هوليوود إلى التحولات الرقمية لشركات Fortune 500"
+          description: "فريقنا يجلب عقودًا من الخبرة من إنتاجات هوليوود إلى التحو��ات الرقمية لشركات Fortune 500"
         },
         {
           icon: Users,
           title: "معدل رضا العملاء 100%",
-          description: "��ل مشروع يُسلم في الوقت المحدد، ضمن الميزانية، بدون أي تنازل عن الجودة"
+          description: "كل مشروع يُسلم في الوقت المحدد، ضمن الميزانية، بدون أي تنازل عن الجودة"
         },
         {
           icon: Star,
@@ -187,7 +187,7 @@ const Home = () => {
       <ScrollScenes />
 
       {/* Featured Projects */}
-      <section className="py-24 bg-card/30">
+      <section className="py-24 bg-card/30" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-primary relative z-[10]">
@@ -263,7 +263,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24">
+      <section className="py-24" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-primary relative z-[10]">
@@ -355,7 +355,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-card/30">
+      <section className="py-24 bg-card/30" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-primary">
@@ -391,7 +391,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 hero-pattern">
+      <section className="py-24 hero-pattern" data-sr-group data-sr-stagger="100">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
