@@ -40,8 +40,10 @@ export const initGlobalScrollReveal = (stagger = 80) => {
           const overrideDelay = el.dataset.srDelay ? Number(el.dataset.srDelay) : null;
           const finalDelay = overrideDelay ?? delay;
 
-          // Set CSS animation delay for CSS-based animations
-          el.style.animationDelay = `${finalDelay}ms`;
+          // Set CSS animation delay if not already specified inline
+          if (!el.style.animationDelay) {
+            el.style.animationDelay = `${finalDelay}ms`;
+          }
 
           window.setTimeout(() => {
             el.classList.add('sr-play');
