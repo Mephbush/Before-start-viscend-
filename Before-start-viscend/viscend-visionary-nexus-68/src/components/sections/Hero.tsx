@@ -106,7 +106,7 @@ const Hero = ({ language }: HeroProps) => {
         <div className="dynamic-hero-bg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-3xl opacity-90" />
       </motion.div>
 
-      <div className="container mx-auto px-4 relative z-20">
+      <div className="container mx-auto px-4 relative z-20" data-sr-group data-sr-stagger="90">
         <div className="max-w-6xl mx-auto">
           {/* Main Hero Content */}
           <motion.div 
