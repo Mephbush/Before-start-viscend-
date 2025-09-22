@@ -62,7 +62,7 @@ export const initGlobalScrollReveal = (stagger = 80) => {
         // Once played, unobserve group to avoid re-triggering
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
 
     observer.observe(group);
     groupObservers.push(observer);
