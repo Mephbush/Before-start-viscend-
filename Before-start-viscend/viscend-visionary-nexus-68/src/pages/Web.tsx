@@ -166,7 +166,7 @@ const Web = () => {
         {
           icon: ShoppingCart,
           title: "منصات التجارة الإلكترونية",
-          description: "حلول تجارة إلكترونية متكاملة تحول الزوا�� إلى عملاء بتجربة تسوق سلسة.",
+          description: "حلول تجارة إلكترونية متكاملة تحوّل الزوّار إلى عملاء بتجربة تسوق سلسة.",
           features: ["عربة التسوق", "بوابات الدفع", "إدارة المخزون", "تتبع الطلبات"],
           technologies: ["Shopify", "WooCommerce", "Magento", "حلول مخصصة"],
           projects: ["متاجر إلكترونية", "منصات B2B", "أسواق إلكترونية"]
@@ -183,7 +183,7 @@ const Web = () => {
           icon: Code,
           title: "تطبيقات ويب مخصصة",
           description: "تطبيقات ويب مصممة خصيصاً لحل تحديات العمل المحددة وتبسيط العمليات.",
-          features: ["التطوير المخصص", "تكامل API", "تصميم قواعد البيانات", "إدارة المستخدمين"],
+          features: ["التطوير المخصص", "تكامل API", "تصميم قواعد البيانات", "إدارة ال��ستخدمين"],
           technologies: ["React", "Node.js", "Python", "PostgreSQL"],
           projects: ["أدوات العمل", "منصات SaaS", "أنظمة داخلية"]
         },
@@ -223,7 +223,7 @@ const Web = () => {
           features: ["معارض المشاريع", "دراسات الحالة", "شهادات العملاء", "نماذج الاتصال"]
         },
         {
-          type: "ا��حجوزات",
+          type: "الحجوزات",
           description: "أنظمة مواعيد وحجوزات لشركات الخدمات",
           features: ["تكامل التقويم", "معالجة الدفع", "إشعارات آلية", "إدارة العملاء"]
         },
@@ -279,7 +279,7 @@ const Web = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 hero-pattern">
+      <section className="py-24 hero-pattern" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass border border-secondary/20 mb-8 animate-fade-in">
@@ -305,7 +305,7 @@ const Web = () => {
       </section>
 
       {/* Digital Readiness */}
-      <section className="py-24 bg-card/30">
+      <section className="py-24 bg-card/30" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gradient-secondary">
@@ -319,7 +319,7 @@ const Web = () => {
       </section>
 
       {/* Our Expertise Highlights: Frontend / Backend / DB / Security */}
-      <section className="py-20">
+      <section className="py-20" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -349,7 +349,7 @@ const Web = () => {
 
               <div className="glass p-6 text-center">
                 <div className="text-2xl font-bold text-primary mb-3">Security</div>
-                <p className="text-sm text-muted-foreground">{language === 'ar' ? 'أفضل ممارسات الأمان، تشفير، وإدارة وصول' : 'Best security practices, encryption and access control'}</p>
+                <p className="text-sm text-muted-foreground">{language === 'ar' ? 'أفضل ممارسات الأ��ان، تشفير، وإدارة وصول' : 'Best security practices, encryption and access control'}</p>
               </div>
             </div>
           </div>
@@ -357,7 +357,7 @@ const Web = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24">
+      <section className="py-24" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-secondary">

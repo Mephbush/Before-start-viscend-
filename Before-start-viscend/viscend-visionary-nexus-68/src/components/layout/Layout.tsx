@@ -6,6 +6,20 @@ import Footer from "./Footer";
 import CustomCursor from "@/components/ui/custom-cursor";
 import IntroAnimation from "@/components/ui/intro-animation";
 import { cn } from "@/lib/utils";
+import { motion, useScroll, useSpring } from "framer-motion";
+
+const ScrollProgress = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 20, mass: 0.3 });
+  return (
+    <motion.div
+      style={{ scaleX }}
+      className="fixed top-0 left-0 right-0 h-1 origin-left z-[60]"
+    >
+      <div className="h-full w-full bg-gradient-to-r from-primary to-secondary" />
+    </motion.div>
+  );
+};
 
 const Layout = () => {
   const [language, setLanguage] = useState<"en" | "ar">("en");
@@ -109,11 +123,14 @@ const Layout = () => {
           theme={theme}
           onThemeChange={setTheme}
         />
-        
+
+        {/* Scroll progress bar */}
+        <ScrollProgress />
+
         <main className="pt-20">
           <Outlet context={{ language }} />
         </main>
-        
+
         <Footer language={language} />
       </div>
     </>

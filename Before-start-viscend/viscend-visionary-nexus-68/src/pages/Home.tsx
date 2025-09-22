@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Hero from "@/components/sections/Hero";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import ScrollRevealGroup from "@/components/ui/scroll-reveal-group";
+import ScrollScenes from "@/components/sections/ScrollScenes";
 import { 
   Sparkles, 
   Eye, 
@@ -182,8 +183,11 @@ const Home = () => {
       {/* Hero Section */}
       <Hero language={language} />
 
+      {/* Scroll-driven Scenes */}
+      <ScrollScenes />
+
       {/* Featured Projects */}
-      <section className="py-24 bg-card/30">
+      <section className="py-24 bg-card/30" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-primary relative z-[10]">
@@ -249,7 +253,7 @@ const Home = () => {
               className="glass border-primary/30 hover:border-primary/50"
               asChild
             >
-              <Link to="/portfolio" className="flex items-center space-x-2">
+              <Link to="/portfolio" className="flex items-center space-x-2 relative z-[10]">
                 <span>View All Projects</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -259,7 +263,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24">
+      <section className="py-24" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-primary relative z-[10]">
@@ -299,12 +303,12 @@ const Home = () => {
                 ))}
               </div>
 
-              <Button 
-                className="w-full btn-cinematic text-white border-none"
+              <Button
+                className="w-full btn-cinematic text-white border-none relative z-[10]"
                 asChild
               >
-                <Link to="/studio">
-                  Explore Studio Services
+                <Link to="/studio" className="relative z-[10]">
+                  {language === 'ar' ? 'استكشف خدمات الاستوديو' : 'Explore Studio Services'}
                 </Link>
               </Button>
             </div>
@@ -337,12 +341,12 @@ const Home = () => {
                 ))}
               </div>
 
-              <Button 
-                className="w-full bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 text-white border-none"
+              <Button
+                className="w-full bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 text-white border-none relative z-[10]"
                 asChild
               >
-                <Link to="/web">
-                  Explore Web Services
+                <Link to="/web" className="relative z-[10]">
+                  {language === 'ar' ? 'استكشف خدمات الويب' : 'Explore Web Services'}
                 </Link>
               </Button>
             </div>
@@ -351,7 +355,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-card/30">
+      <section className="py-24 bg-card/30" data-sr-group data-sr-stagger="90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-primary">
@@ -387,7 +391,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 hero-pattern">
+      <section className="py-24 hero-pattern" data-sr-group data-sr-stagger="100">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">

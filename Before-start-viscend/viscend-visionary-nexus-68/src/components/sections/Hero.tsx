@@ -101,12 +101,12 @@ const Hero = ({ language }: HeroProps) => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.2 }}
       >
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
-        <div className="dynamic-hero-bg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-3xl opacity-90" />
+        <div className="absolute-decorative absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute-decorative absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
+        <div className="absolute-decorative dynamic-hero-bg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-3xl opacity-90" />
       </motion.div>
 
-      <div className="container mx-auto px-4 relative z-20">
+      <div className="container mx-auto px-4 relative z-20" data-sr-group data-sr-stagger="90">
         <div className="max-w-6xl mx-auto">
           {/* Main Hero Content */}
           <motion.div 
