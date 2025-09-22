@@ -166,7 +166,7 @@ const Web = () => {
         {
           icon: ShoppingCart,
           title: "منصات التجارة الإلكترونية",
-          description: "حلول تجارة إلكترونية متكاملة تحول الزوا�� إلى عملاء بتجربة تسوق سلسة.",
+          description: "حلول تجارة إلكترونية متكاملة تحوّل الزوّار إلى عملاء بتجربة تسوق سلسة.",
           features: ["عربة التسوق", "بوابات الدفع", "إدارة المخزون", "تتبع الطلبات"],
           technologies: ["Shopify", "WooCommerce", "Magento", "حلول مخصصة"],
           projects: ["متاجر إلكترونية", "منصات B2B", "أسواق إلكترونية"]
@@ -183,7 +183,7 @@ const Web = () => {
           icon: Code,
           title: "تطبيقات ويب مخصصة",
           description: "تطبيقات ويب مصممة خصيصاً لحل تحديات العمل المحددة وتبسيط العمليات.",
-          features: ["التطوير المخصص", "تكامل API", "تصميم قواعد البيانات", "إدارة المستخدمين"],
+          features: ["التطوير المخصص", "تكامل API", "تصميم قواعد البيانات", "إدارة ال��ستخدمين"],
           technologies: ["React", "Node.js", "Python", "PostgreSQL"],
           projects: ["أدوات العمل", "منصات SaaS", "أنظمة داخلية"]
         },
@@ -210,7 +210,7 @@ const Web = () => {
         {
           type: "الشركات",
           description: "مواقع أعمال احترافية تبني الثقة والمصداقية",
-          features: ["صفحات حول الشركة", "أوصاف الخد��ات", "ملفات الفريق", "معلومات الاتصال"]
+          features: ["صفحات حول الشركة", "أوصاف الخدمات", "ملفات الفريق", "معلومات الاتصال"]
         },
         {
           type: "التجارة الإلكترونية",
@@ -223,7 +223,7 @@ const Web = () => {
           features: ["معارض المشاريع", "دراسات الحالة", "شهادات العملاء", "نماذج الاتصال"]
         },
         {
-          type: "ا��حجوزات",
+          type: "الحجوزات",
           description: "أنظمة مواعيد وحجوزات لشركات الخدمات",
           features: ["تكامل التقويم", "معالجة الدفع", "إشعارات آلية", "إدارة العملاء"]
         },
@@ -244,7 +244,7 @@ const Web = () => {
         {
           step: "01",
           title: "الاكتشاف والتخطيط",
-          description: "نفهم أهداف عملك والجمهور المستهدف والمتطلبات ��لتقنية لإنشاء خطة مشروع شاملة."
+          description: "نفهم أهداف عملك والجمهور المستهدف والمتطلبات التقنية لإنشاء خطة مشروع شاملة."
         },
         {
           step: "02",
@@ -349,7 +349,7 @@ const Web = () => {
 
               <div className="glass p-6 text-center">
                 <div className="text-2xl font-bold text-primary mb-3">Security</div>
-                <p className="text-sm text-muted-foreground">{language === 'ar' ? 'أفضل ممارسات الأمان، تشفير، وإدارة وصول' : 'Best security practices, encryption and access control'}</p>
+                <p className="text-sm text-muted-foreground">{language === 'ar' ? 'أفضل ممارسات الأ��ان، تشفير، وإدارة وصول' : 'Best security practices, encryption and access control'}</p>
               </div>
             </div>
           </div>
