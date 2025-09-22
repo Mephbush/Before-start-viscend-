@@ -281,7 +281,7 @@ All colors MUST be HSL.
 
   /* Arabic font support */
   .font-arabic {
-    font-family: 'Cairo', 'Tajawal', 'Amiri', sans-serif;
+    font-family: 'IBM Plex Sans Arabic', 'Cairo', 'Tajawal', 'Amiri', system-ui, -apple-system, Segoe UI, sans-serif;
   }
 
   /* Animation utilities */
