@@ -12,8 +12,17 @@ const SELECTOR = [
 
 export const useGlobalScrollReveal = (stagger = 80) => {
   useEffect(() => {
-    const cleanup = initGlobalScrollReveal(stagger);
-    return () => cleanup && cleanup();
+    const start = () => initGlobalScrollReveal(stagger);
+    const rid = (window as any).requestIdleCallback
+      ? (window as any).requestIdleCallback(start, { timeout: 400 })
+      : window.setTimeout(start, 120);
+    return () => {
+      if ((window as any).cancelIdleCallback && typeof rid === 'number') {
+        (window as any).cancelIdleCallback(rid);
+      } else {
+        clearTimeout(rid as number);
+      }
+    };
   }, [stagger]);
 };
 
