@@ -86,7 +86,7 @@ export const initGlobalScrollReveal = (stagger = 80) => {
         el.classList.add('sr-play');
       }, delay);
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
 
   looseItems.forEach((el) => looseObserver.observe(el));
 
