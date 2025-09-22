@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Hero from "@/components/sections/Hero";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import ScrollRevealGroup from "@/components/ui/scroll-reveal-group";
+import ScrollScenes from "@/components/sections/ScrollScenes";
 import { 
   Sparkles, 
   Eye, 
@@ -92,7 +93,7 @@ const Home = () => {
       studioTitle: "الاستوديو",
       studioDescription: "إنتاج مرئي سينمائي يحكي قصتك",
       studioServices: [
-        "المؤثرات البصرية والرسوم المتحركة",
+        "المؤثرات البصرية والرسوم المتح��كة",
         "الرسوم ثلاثية الأبعاد",
         "الجرافيك المتحرك",
         "أفلام العلامات التجارية",
@@ -122,7 +123,7 @@ const Home = () => {
         {
           icon: Users,
           title: "معدل رضا العملاء 100%",
-          description: "كل مشروع يُسلم في الوقت المحدد، ضمن الميزانية، بدون أي تنازل عن الجودة"
+          description: "��ل مشروع يُسلم في الوقت المحدد، ضمن الميزانية، بدون أي تنازل عن الجودة"
         },
         {
           icon: Star,
@@ -181,6 +182,9 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero language={language} />
+
+      {/* Scroll-driven Scenes */}
+      <ScrollScenes />
 
       {/* Featured Projects */}
       <section className="py-24 bg-card/30">
