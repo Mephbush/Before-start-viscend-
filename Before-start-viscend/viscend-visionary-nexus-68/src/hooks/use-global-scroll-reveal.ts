@@ -70,7 +70,9 @@ export const initGlobalScrollReveal = (stagger = 80) => {
     visible.forEach((entry, i) => {
       const el = entry.target as HTMLElement;
       const delay = i * stagger;
-      el.style.animationDelay = `${delay}ms`;
+      if (!el.style.animationDelay) {
+        el.style.animationDelay = `${delay}ms`;
+      }
       setTimeout(() => {
         el.classList.add('sr-play');
       }, delay);
