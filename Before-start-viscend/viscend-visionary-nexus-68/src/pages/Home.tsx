@@ -133,7 +133,7 @@ const Home = () => {
         {
           icon: CheckCircle,
           title: "نهج يركز على العائد على الاستثمار",
-          description: "كل قرار ابداعي وخيار تقن�� يُتخذ لتعظيم العائد على الاستثمار"
+          description: "كل قرار ابداعي وخيار تقني يُتخذ لتعظيم العائد على الاستثمار"
         }
       ],
       
@@ -253,7 +253,7 @@ const Home = () => {
               className="glass border-primary/30 hover:border-primary/50"
               asChild
             >
-              <Link to="/portfolio" className="flex items-center space-x-2">
+              <Link to="/portfolio" className="flex items-center space-x-2 relative z-[10]">
                 <span>View All Projects</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -303,12 +303,12 @@ const Home = () => {
                 ))}
               </div>
 
-              <Button 
-                className="w-full btn-cinematic text-white border-none"
+              <Button
+                className="w-full btn-cinematic text-white border-none relative z-[10]"
                 asChild
               >
-                <Link to="/studio">
-                  Explore Studio Services
+                <Link to="/studio" className="relative z-[10]">
+                  {language === 'ar' ? 'استكشف خدمات الاستوديو' : 'Explore Studio Services'}
                 </Link>
               </Button>
             </div>
@@ -341,12 +341,12 @@ const Home = () => {
                 ))}
               </div>
 
-              <Button 
-                className="w-full bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 text-white border-none"
+              <Button
+                className="w-full bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 text-white border-none relative z-[10]"
                 asChild
               >
-                <Link to="/web">
-                  Explore Web Services
+                <Link to="/web" className="relative z-[10]">
+                  {language === 'ar' ? 'استكشف خدمات الويب' : 'Explore Web Services'}
                 </Link>
               </Button>
             </div>
